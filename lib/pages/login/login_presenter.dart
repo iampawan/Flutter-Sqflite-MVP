@@ -15,6 +15,6 @@ class LoginPagePresenter {
     api
         .login(username, password)
         .then((user) => _view.onLoginSuccess(user))
-        .catchError((onError) => _view.onLoginError(onError));
+        .catchError((onError) => _view.onLoginError(onError.toString()));
   }
 }
